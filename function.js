@@ -26,3 +26,9 @@ var x = function (y) {
     return y + 2;
 };
 console.log(x(5));
+// in case of array
+var arr = [1, 2, 3];
+var answer = arr.map(function (i) {
+    return i * 2;
+});
+console.log(answer);

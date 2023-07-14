@@ -31,3 +31,10 @@ var x = (y: number): number=>{ //this code will strictly return number
     return y+2;
 }
 console.log(x(5))
+
+// in case of array
+var arr = [1,2,3]
+var answer = arr.map((i):number=>{
+    return i*2;
+})
+console.log(answer)
