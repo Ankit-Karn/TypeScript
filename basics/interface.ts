@@ -9,8 +9,18 @@ interface user {
     getCoupon(couponName: string, discount: number): number
 }
 
-let Ankit: user = {
-    dbId: 16, emailId: "a@gmail.com", userId: 10, googleId: 1147,
+// reopening of the interface
+interface user{
+    githubId: string
+}
+
+// inheritance in interface
+interface Admin extends user {
+    role: "admin" | "TA" | "learner"
+}
+
+let Ankit: Admin = {
+    dbId: 16, emailId: "a@gmail.com", userId: 10, googleId: 1147, githubId : "ankit_karn", role: "admin",
     startTrail: () =>{
         return "trial started"
     },
