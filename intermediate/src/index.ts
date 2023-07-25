@@ -10,7 +10,7 @@
 class User {
    readonly city: string = "Chaibasa"
 
-    private _courseCount = 1
+    protected _courseCount = 1 //wherever a variable is declared as protected it can be accessed in the class as well as subclass.
 
    constructor(
     public email: string,
@@ -34,6 +34,13 @@ class User {
     }
     this._courseCount = courseNum;
    }
+}
+
+class subUser extends User{ //private properties of user will not be accessible to subUser.
+    isFamily: boolean = true
+    changeCourseCount(){
+        this._courseCount = 4 //if the _courseCount in User class is private we will get error here but if we make it protected it will work fine.
+    }
 }
 
 const Ankit = new User("ankit@gmail.com", "Ankit", "123");
