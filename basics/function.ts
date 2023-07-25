@@ -38,3 +38,5 @@ var answer = arr.map((i):number=>{
     return i*2;
 })
 console.log(answer)
+
+export {}
