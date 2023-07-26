@@ -20,3 +20,5 @@ class Insta implements takePhoto, story{
         console.log("story created");
     }
 }
+
+// points to remember - A class implements an interface
