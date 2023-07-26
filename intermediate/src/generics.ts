@@ -40,5 +40,41 @@ const getProductDetails = <T>(products: T[]): T=> {
     return products[i]
 } 
 
+// using type parameter in generic constraints
+interface Database{
+    connection: string,
+    username: string,
+    password: string
+}
+
+function anotherFunc <T, U extends Database>(valueOne: T, valueTwo: U): object{
+    return {
+        valueOne,
+        valueTwo
+    }
+}
+
+// anotherFunc(3,{connection:"yes", username: "ankit", password: "ankit10"});
+
+// using class type in generics
+
+interface Quiz{
+    name: string,
+    type: string
+}
+
+interface Course{
+    name: string,
+    author: string,
+    subject: string
+}
+
+class sellable<T> {
+    public cart: T[] = []
+
+    addToCart(products: T){
+        this.cart.push(products)
+    }
+}
 
 export{}
